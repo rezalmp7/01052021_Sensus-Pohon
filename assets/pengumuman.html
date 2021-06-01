@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- UIkit CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.uikit.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- UIkit JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@2.0.0-rc.6/dist/iconify.min.js"></script>
+
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="uk-container uk-height-1-1 uk-container-expand uk-margin-remove uk-padding-remove" id="pengumuman">
+        <div class="uk-width-1-1 uk-height-1-1 uk-padding-remove uk-margin-remove" id="body" uk-grid>
+            <div class="uk-width-1-6@l uk-width-1-5@m uk-padding-small uk-margin-remove" id="sidenav">
+                <ul class="uk-nav uk-nav-default">
+                    <li
+                        class="uk-nav-header uk-text-center uk-padding uk-padding-remove-horizontal uk-margin-small-bottom">
+                        <img class="uk-width-3-5" src="img/color logo fun.png">
+                    </li>
+                    <li class="uk-padding-remove uk-margin-remove"><a class="uk-display-block"
+                            href="dashboard.html"><span class="iconify" data-icon="bx:bxs-dashboard"
+                                data-inline="false"></span> Dasboard</a>
+                    </li>
+                    <li class="uk-padding-remove uk-margin-remove"><a class="uk-display-block" href="user.html"><span
+                                class="iconify" data-icon="bx:bxs-user" data-inline="false"></span>
+                            User Admin</a></li>
+                    <li class="uk-padding-remove uk-margin-remove"><a class="uk-display-block" href="pegawai.html"><span
+                                class="iconify" data-icon="gridicons:multiple-users" data-inline="false"></span>
+                            Pegawai</a></li>
+                    <li class="uk-padding-remove uk-margin-remove"><a class="uk-display-block" href="pohon.html"><span
+                                class="iconify" data-icon="bx:bxs-tree" data-inline="false"></span> Data Pohon</a></li>
+                    <li class="uk-padding-remove uk-margin-remove"><a class="uk-display-block"
+                            href="laporan.html"><span class="iconify" data-icon="bx:bxs-report"
+                                data-inline="false"></span> Laporan</a></li>
+                    <li class="uk-active uk-padding-remove uk-margin-remove"><a class="uk-display-block"
+                            href="pengumuman.html"><span class="iconify" data-icon="bx:bxs-news"
+                                data-inline="false"></span> Pengumuman</a></li>
+                </ul>
+            </div>
+            <div class="uk-width-5-6@l uk-width-4-5@m uk-padding-small uk-margin-remove" id="content">
+                <div class="uk-width-1-1 uk-padding-remove uk-margin-remove">
+                    <div
+                        class="uk-width-1-1 uk-padding-large uk-margin-remove head uk-clearefix uk-padding-remove-vertical">
+                        <div class="uk-inline">
+                            <form method="post" id="search" action="#">
+                                <div class="uk-margin">
+                                    <div class="uk-inline">
+                                        <a href="#" onclick="document.getElementById('search').submit()"
+                                            class="uk-form-icon"><span class="iconify" data-icon="bx:bx-search"
+                                                data-inline="false"></span></a>
+                                        <input class="uk-input" type="text" name="search">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="uk-inline uk-float-right">
+                            <div class="uk-float-left profil uk-background-cover uk-background-top-center uk-background-norepeat"
+                                style="background-image: url('img/admin.png');"></div>
+                            <span
+                                class="uk-margin-small-left uk-float-right uk-padding-small uk-padding-remove-horizontal">Admin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-1 uk-padding-remove uk-margin-remove">
+                    <div class="uk-width-1-1 uk-padding-large uk-padding-remove-vertical uk-margin-remove body-content">
+                        <div
+                            class="uk-width-1-1 uk-child-width-1-3 uk-padding-remove uk-margin-remove-left uk-margin-remove-right uk-margin-small-top heading">
+                            <div class="uk-width-1-1 uk-padding uk-padding-remove-vertical uk-margin-remove">
+                                <ul class="uk-breadcrumb">
+                                    <li><a href="dashboard.html">Dashboard</a></li>
+                                    <li><span>Pengumuman</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-1 uk-padding uk-margin-remove">
+                            <div class="uk-width-1-1 uk-padding-remove uk-margin-remove">
+                                <h5 class="poppins-semi-bold">Foto Perusahaan</h5>
+                                <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-text-center img-slider" uk-grid>
+                                    <div>
+                                        <div class="uk-inline">
+                                            <img class="uk-width-1-1 uk-padding-remove uk-margin-remove" src="img/slide/img1.png">
+                                            <div class="uk-overlay uk-padding-remove uk-position-top">
+                                                <a href="user_edit.html" class="uk-button button-uk-warning uk-button-small"><span class="iconify"
+                                                        data-icon="fa-solid:pen" data-inline="false"></span></a>
+                                                <a href="user_edit.html" class="uk-button uk-button-danger uk-button-small"><span class="iconify"
+                                                        data-icon="bx:bxs-trash-alt" data-inline="false"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-inline">
+                                            <img class="uk-width-1-1 uk-padding-remove uk-margin-remove" src="img/slide/img2.png">
+                                            <div class="uk-overlay uk-padding-remove uk-position-top">
+                                                <a href="user_edit.html" class="uk-button button-uk-warning uk-button-small"><span class="iconify"
+                                                        data-icon="fa-solid:pen" data-inline="false"></span></a>
+                                                <a href="user_edit.html" class="uk-button uk-button-danger uk-button-small"><span class="iconify"
+                                                        data-icon="bx:bxs-trash-alt" data-inline="false"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-inline">
+                                            <img class="uk-width-1-1 uk-padding-remove uk-margin-remove" src="img/slide/img3.png">
+                                            <div class="uk-overlay uk-padding-remove uk-position-top">
+                                                <a href="user_edit.html" class="uk-button button-uk-warning uk-button-small"><span class="iconify"
+                                                        data-icon="fa-solid:pen" data-inline="false"></span></a>
+                                                <a href="user_edit.html" class="uk-button uk-button-danger uk-button-small"><span class="iconify"
+                                                        data-icon="bx:bxs-trash-alt" data-inline="false"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-inline">
+                                            <img class="uk-width-1-1 uk-padding-remove uk-margin-remove" src="img/slide/img3.png">
+                                            <div class="uk-overlay uk-padding-remove uk-position-top">
+                                                <a href="user_edit.html" class="uk-button button-uk-warning uk-button-small"><span class="iconify"
+                                                        data-icon="fa-solid:pen" data-inline="false"></span></a>
+                                                <a href="user_edit.html" class="uk-button uk-button-danger uk-button-small"><span class="iconify"
+                                                        data-icon="bx:bxs-trash-alt" data-inline="false"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="#tambah_photo" uk-toggle>
+                                            <div class="uk-card uk-padding-small uk-card-body"><span class="iconify" data-icon="akar-icons:plus" data-inline="false"></span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-1-1 uk-padding-remove uk-margin-medium-top">
+                                <form>
+                                    <div class="uk-width-1-1 uk-clearfix uk-margin-remove" uk-grid>
+                                        <h5 class="uk-padding-remove poppins-semi-bold">Profile Prusahaan</h5>
+                                        <div class="uk-width-expand uk-text-right"><a href="#" class="uk-width-auto uk-float-right uk-link-text" onclick="document.getElementById('search').submit()"><span class="iconify" data-icon="bx:bx-edit-alt" data-inline="false"></span></a></div>
+                                    </div>
+                                    <div class="uk-width-1-1">
+                                        <textarea class="uk-textarea uk-width-1-1" rows="5" name="profil"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="uk-width-1-1 uk-padding-remove uk-margin-medium-top">
+                                <h5 class="poppins-semi-bold">Pengumuman</h5>
+                                <div class="uk-width-1-1 uk-padding-remove uk-clearfix">
+                                    <div class="uk-width-1-1">
+                                        <a class="uk-button button-success-line uk-float-right" href="#modal-overflow" uk-toggle><span class="iconify"
+                                                data-icon="akar-icons:plus" data-inline="false"></span>
+                                            Tambah</a>
+                                    </div>
+                                </div>
+                                <div class="uk-width-1-1 uk-padding uk-padding-remove-horizontal uk-margin-remove">
+                                    <div class="uk-padding-small uk-margin-remove table">
+                                        <table id="data_table" class="uk-table uk-table-hover uk-table-striped" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>NO</th>
+                                                    <th>Tanggal</th>
+                                                    <th>Judul</th>
+                                                    <th>Deskripsi</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>11/05/2021 03:00 AM</td>
+                                                    <td>Table Data</td>
+                                                    <td>Table Data</td>
+                                                    <td>
+                                                        <a href="user_edit.html" class="uk-button button-uk-warning uk-button-small"><span
+                                                                class="iconify" data-icon="fa-solid:pen" data-inline="false"></span></a>
+                                                        <a href="user_edit.html" class="uk-button uk-button-danger uk-button-small"><span
+                                                                class="iconify" data-icon="bx:bxs-trash-alt" data-inline="false"></span></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal-overflow" class="uk-modal-container" uk-modal>
+                        <div class="uk-modal-dialog">
+                    
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                    
+                            <div class="uk-modal-header">
+                                <h2 class="uk-modal-title">Tambah Pengumuman</h2>
+                            </div>
+                    
+                            <form class="uk-form-stacked">
+                                <div class="uk-modal-body" uk-overflow-auto>
+                    
+                                    <div class="uk-margin">
+                                        <label class="uk-form-label" for="form-stacked-text">Judul</label>
+                                        <div class="uk-form-controls">
+                                            <input class="uk-input field-default " id="form-stacked-text" name="judul" type="text"
+                                                placeholder="Judul...">
+                                        </div>
+                                    </div>
+                    
+                                    <div class="uk-margin">
+                                        <label class="uk-form-label" for="form-stacked-text">Deskripsi</label>
+                                        <div class="uk-form-controls">
+                                            <textarea class="uk-textarea" name="deskripsi" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                    
+                                <div class="uk-modal-footer uk-text-right">
+                                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                    <input type="submit" class="uk-button uk-button-primary" value="SAVE">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="tambah_photo" class="uk-modal-container" uk-modal>
+                        <div class="uk-modal-dialog">
+                    
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                    
+                            <div class="uk-modal-header">
+                                <h2 class="uk-modal-title">Tambah Gambar</h2>
+                            </div>
+                    
+                            <form class="uk-form-stacked">
+                                <div class="uk-modal-body" uk-overflow-auto>
+                    
+                                    <div class="uk-margin">
+                                        <label class="uk-form-label" for="form-stacked-text">Gambar</label>
+                                        <div class="uk-form-controls">
+                                            <input id="form-stacked-text" name="gambar" type="file" placeholder="Nama Lengkap...">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="uk-margin uk-clearfix">
+                                        <input type="submit" class="uk-button button-success uk-float-right" value="SIMPAN">
+                                    </div>
+                    
+                                </div>
+                    
+                                <div class="uk-modal-footer uk-text-right">
+                                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                                    <input type="submit" class="uk-button uk-button-primary" value="SAVE">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
